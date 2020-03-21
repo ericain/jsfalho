@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> perdi </title>
+<body>
+
+<h1 onclick="this.innerHTML='Oi'"
+>Clique aqui!</h1>
+
+<script type="text/javascript" src="/path/to/event-listener.js"></script>
+
+<form>
+    <input type="text" name="a" />
+    <input type="submit" />
+</form>
+
+<script type="text/javascript">
+var f = document.forms[0];
+addEvent(f, "submit", function( e ) { alert(f.a.value);return false; });
+addEvent(f.a, "keyup", function( e ) { f.a.value=f.a.value.toUpperCase(); });
+</script>
+
+<body onload="Bugou()">
+
+<script>
+function Bugou()
+{
+if (navigator.cookieEnabled==true)
+    {
+    alert("Bugou")
+    }
+else
+    {
+    alert("Bugs são permitidos")
+    }
+}
+
+</script>
+<body>
+
+<div onmouseover="mOver(this)" onmouseout="mOut(this)"
+style="background-color:#FFF8DC;width:40px;height:20px;padding:30px;">1 segundo</div>
+
+<script>
+function mOver(obj)
+{
+obj.innerHTML=":D"
+}
+
+function mOut(obj)
+{
+obj.innerHTML="D:"
+}
+</script>
+</body>
+<body>
+
+<div onmousedown="mDown(this)" onmouseup="mUp(this)"
+style="background-color:#D94A38;width:90px;height:20px;padding:40px;">Confirmar</div>
+
+<script>
+function mDown(obj)
+{
+obj.style.backgroundColor="#1ec5e5";
+obj.innerHTML="Foi"
+}
+
+function mUp(obj)
+{
+obj.style.backgroundColor="#D94A38";
+obj.innerHTML="Naofoi"
+}
+</script>
+
+</body>
+
+
+</html>
